@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.20)
+project(LeetCode)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(1 1.cpp)
+add_executable(3 3.cpp)
+add_executable(22 22.cpp)
+add_executable(27 27.cpp)
+add_executable(34 34.cpp)
+add_executable(35 35.cpp)
+add_executable(704 704.cpp)
+add_executable(1509 1509.cpp)
