@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <algorithm>
-#include <vector>
 
 using namespace std;
 
@@ -17,9 +16,15 @@ public:
         int left = 1, right = x / 2;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (x / mid == mid)
-                return mid;
-            else if (x / mid > mid)
+
+            int quotient = x / mid;
+            int remainder = x % mid;
+
+            if (quotient == mid) {
+                if (remainder == 0)
+                    return mid;
+                left = mid + 1;
+            } else if (x / mid > mid)
                 left = mid + 1;
             else
                 right = mid - 1;
@@ -29,7 +34,7 @@ public:
 };
 
 int main() {
-    int x = 2147483647;
+    int x = 5;
     Solution solution;
     cout << solution.mySqrt(x);
 }
