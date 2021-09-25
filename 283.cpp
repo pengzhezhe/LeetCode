@@ -10,26 +10,23 @@ using namespace std;
 
 class Solution {
 public:
-    int removeDuplicates(vector<int> &nums) {
-        if (nums.empty())
-            return 0;
-
+    void moveZeroes(vector<int> &nums) {
         int slow = 0;
         for (int fast = 0; fast < nums.size(); fast++) {
-            if (nums[slow] != nums[fast])
-                nums[++slow] = nums[fast];
+            if (nums[fast] != 0)
+                nums[slow++] = nums[fast];
         }
-        return slow + 1;
+        for (int i = slow; i < nums.size(); i++) {
+            nums[i] = 0;
+        }
     }
 };
 
 int main() {
-    vector<int> nums{};
-    Solution s;
-    int n = s.removeDuplicates(nums);
-    cout << n << endl;
+    vector<int> nums{0, 1, 0, 3, 12};
+    Solution solution;
+    solution.moveZeroes(nums);
     for (int i = 0; i < nums.size(); ++i) {
         cout << nums[i] << endl;
     }
-    return 0;
 }
