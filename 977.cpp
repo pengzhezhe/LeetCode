@@ -48,4 +48,5 @@ int main() {
     for (int i = 0; i < n.size(); ++i) {
         cout << n[i] << endl;
     }
+    return 0;
 }

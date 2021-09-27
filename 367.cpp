@@ -25,8 +25,7 @@ public:
                 if (remainder == 0)
                     return true;
                 left = mid + 1;
-            }
-            else if (quotient < mid)
+            } else if (quotient < mid)
                 right = mid - 1;
             else
                 left = mid + 1;
@@ -39,5 +38,5 @@ int main() {
     int num = 9;
     Solution solution;
     cout << solution.isPerfectSquare(num);
-
+    return 0;
 }

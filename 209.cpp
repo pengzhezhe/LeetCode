@@ -32,4 +32,5 @@ int main() {
 
     Solution solution;
     cout << solution.minSubArrayLen(target, n);
+    return 0;
 }

@@ -34,4 +34,5 @@ int main() {
     string t = "b";
     Solution solution;
     cout << solution.backspaceCompare(s, t);
+    return 0;
 }

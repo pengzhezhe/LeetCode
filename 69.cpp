@@ -37,4 +37,5 @@ int main() {
     int x = 5;
     Solution solution;
     cout << solution.mySqrt(x);
+    return 0;
 }

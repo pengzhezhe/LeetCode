@@ -17,7 +17,7 @@ public:
         int i = 0;
         for (int j = 0; j < fruits.size(); j++) {
             buckets[fruits[j]]++;
-            while(buckets.size() > 2){
+            while (buckets.size() > 2) {
                 buckets[fruits[i]]--;
                 if (buckets[fruits[i]] == 0)
                     buckets.erase(fruits[i]);
@@ -30,7 +30,8 @@ public:
 };
 
 int main() {
-    vector<int> fruits{3,3,3,1,2,1,1,2,3,3,4};
+    vector<int> fruits{3, 3, 3, 1, 2, 1, 1, 2, 3, 3, 4};
     Solution solution;
     cout << solution.totalFruit(fruits);
+    return 0;
 }
