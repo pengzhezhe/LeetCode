@@ -14,43 +14,43 @@ public:
 
         vector<vector<int>> res(n, vector<int>(n, 0));
 
-        int row = 0, line = 0;
+        int startX = 0, startY = 0;
         int loop = n / 2;
         int isSingle = n % 2;
         int num = 1;
         while (loop--) {
             // 1. Left to right
-            for (int i = row; i < n - line - 1; i++) {
-                res[row][i] = num++;
+            for (int i = startY; i < n - startY - 1; i++) {
+                res[startX][i] = num++;
             }
 
             //2. Top to bottom
-            for (int j = line; j < n - row - 1; j++) {
-                res[j][n - row - 1] = num++;
+            for (int i = startX; i < n - startX - 1; i++) {
+                res[i][n - startY - 1] = num++;
             }
 
             //3. Right to left
-            for (int i = n - row - 1; i > row; i--) {
-                res[n - row - 1][i] = num++;
+            for (int i = n - startY - 1; i > startY; i--) {
+                res[n - startX - 1][i] = num++;
             }
 
             //4. Bottom to top
-            for (int j = n - line - 1; j > line; j--) {
-                res[j][line] = num++;
+            for (int i = n - startX - 1; i > startX; i--) {
+                res[i][startY] = num++;
             }
 
-            row++;
-            line++;
+            startX++;
+            startY++;
         }
         if (isSingle) {
-            res[row][line] = num;
+            res[startX][startY] = num;
         }
         return res;
     }
 };
 
 int main() {
-    int n = 1;
+    int n = 4;
     Solution solution;
     vector<vector<int>> res = solution.generateMatrix(n);
     for (int i = 0; i < n; i++) {
