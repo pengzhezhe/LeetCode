@@ -21,17 +21,10 @@ struct ListNode {
 class Solution {
 public:
     ListNode *reverseList(ListNode *head) {
-        if (head == nullptr)
-            return head;
-        ListNode *pre = new ListNode(), *p = head;
-        pre->next = head;
+        ListNode *pre = nullptr, *p = head;
         while (p != nullptr) {
             ListNode *temp = p->next;
-            if (p == head) {
-                p->next = nullptr;
-            } else {
-                p->next = pre;
-            }
+            p->next = pre;
             pre = p;
             p = temp;
         }
