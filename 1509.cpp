@@ -22,3 +22,7 @@ public:
         return minDiff;
     }
 };
+
+int main() {
+    return 0;
+}

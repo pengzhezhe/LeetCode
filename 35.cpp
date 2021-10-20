@@ -24,3 +24,7 @@ public:
         return left;
     }
 };
+
+int main() {
+    return 0;
+}
