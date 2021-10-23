@@ -55,7 +55,8 @@ int main() {
 //                               {9, 10, 11, 12}};
 
 //    vector<vector<int>> matrix{{6, 9, 7}};
-    vector<vector<int>> matrix{{3},{2}};
+    vector<vector<int>> matrix{{3},
+                               {2}};
 
 //    vector<vector<int>> matrix{{1, 2, 3},
 //                               {4, 5, 6},

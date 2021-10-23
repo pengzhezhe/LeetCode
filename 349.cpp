@@ -19,7 +19,7 @@ public:
                 ans.insert(num);
         }
 
-        return vector<int>(ans.begin(),ans.end());
+        return vector<int>(ans.begin(), ans.end());
     }
 };
 

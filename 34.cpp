@@ -35,7 +35,7 @@ public:
 
         left = start;
         right = nums.size() - 1;
-        
+
         while (left <= right) {
             int mid = (left + right) / 2;
 
