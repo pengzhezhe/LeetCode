@@ -49,6 +49,17 @@ public:
     }
 };
 
+class Solution2 {
+public:
+    int maxDepth(TreeNode *root) {
+        if (root == nullptr)
+            return 0;
+        int leftMaxDepth = maxDepth(root->left);
+        int rightMaxDepth = maxDepth(root->right);
+        return max(leftMaxDepth, rightMaxDepth) + 1;
+    }
+};
+
 int main() {
     return 0;
 }
