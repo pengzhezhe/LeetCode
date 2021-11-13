@@ -52,6 +52,23 @@ public:
     }
 };
 
+class Solution2 {
+public:
+    int minDepth(TreeNode *root) {
+        if (root == nullptr)
+            return 0;
+        int leftDepth = minDepth(root->left);
+        int rightDepth = minDepth(root->right);
+
+        if (root->left == nullptr && root->right != nullptr)
+            return rightDepth + 1;
+        if (root->left != nullptr && root->right == nullptr)
+            return leftDepth + 1;
+
+        return min(leftDepth, rightDepth) + 1;
+    }
+};
+
 int main() {
     return 0;
 }
