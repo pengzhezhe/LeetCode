@@ -41,15 +41,13 @@ public:
             cur->left = root->left;
 
             return root->right;
-
         }
 
-        if (key < root->val) {
+        if (key < root->val)
             root->left = deleteNode(root->left, key);
-        }
 
         if (key > root->val)
-        root->right = deleteNode(root->right, key);
+            root->right = deleteNode(root->right, key);
 
         return root;
     }
