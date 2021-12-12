@@ -21,13 +21,15 @@ private:
         }
 
         for (int i = 0; i < nums.size(); i++) {
-            if (used[i] == false) {
-                path.push_back(nums[i]);
-                used[i] = true;
-                backtracing(nums);
-                used[i] = false;
-                path.pop_back();
+            if (used[i]) {
+                continue;
             }
+
+            path.push_back(nums[i]);
+            used[i] = true;
+            backtracing(nums);
+            used[i] = false;
+            path.pop_back();
         }
     }
 
