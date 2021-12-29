@@ -5,7 +5,6 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <list>
 
 using namespace std;
 
@@ -17,7 +16,6 @@ private:
 
 public:
     int findMinArrowShots(vector<vector<int>> &points) {
-        vector<vector<vector<int>>> set;
         sort(points.begin(), points.end(), cmp);
 
         int result = 1;
