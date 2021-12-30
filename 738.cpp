@@ -4,8 +4,6 @@
 
 #include <iostream>
 #include <algorithm>
-#include <vector>
-#include <math.h>
 
 using namespace std;
 
@@ -24,7 +22,7 @@ public:
         for (int i = flag; i < s.size(); i++) {
             s[i] = '9';
         }
-        
+
         return stoi(s);
     }
 };
