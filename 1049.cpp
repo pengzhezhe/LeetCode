@@ -44,7 +44,6 @@ public:
         }
 
         vector<int> dp(sum / 2 + 1, 0);
-
         for (int i = 0; i < stones.size(); i++) {
             for (int j = sum / 2; j >= stones[i]; j--) {
                 dp[j] = max(dp[j], dp[j - stones[i]] + stones[i]);
