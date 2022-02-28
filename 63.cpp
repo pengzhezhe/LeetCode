@@ -20,7 +20,6 @@ public:
             dp[i][0] = 1;
         }
 
-
         for (int j = 0; j < n && obstacleGrid[0][j] == 0; j++) {
             dp[0][j] = 1;
         }
