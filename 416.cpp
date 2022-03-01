@@ -12,8 +12,8 @@ class Solution {
 public:
     bool canPartition(vector<int> &nums) {
         int sum = 0;
-        for (int i = 0; i < nums.size(); i++) {
-            sum += nums[i];
+        for (int num : nums) {
+            sum += num;
         }
 
         if (sum % 2 != 0) {
@@ -35,8 +35,8 @@ class Solution2 {
 public:
     bool canPartition(vector<int> &nums) {
         int sum = 0;
-        for (int i = 0; i < nums.size(); i++) {
-            sum += nums[i];
+        for (int num : nums) {
+            sum += num;
         }
 
         if (sum % 2 != 0) {
